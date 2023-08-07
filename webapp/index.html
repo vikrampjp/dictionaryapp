@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Full Form Dictionary</title>
+    <style>
+        /* Quick and dirty normalize hax */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #eee;
+            color: #a1a1a1;
+            font-family: Georgia, serif;
+        }
+
+
+
+        .heading {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .searchInputWrapper {
+            position: relative;
+        }
+
+        .searchInput {
+            width: 100%;
+            height: 3rem;
+            padding: 0 1rem;
+            border-radius: 2rem;
+            border: none;
+            transition: transform 0.1s ease-in-out;
+        }
+
+        ::placeholder {
+            color: #a1a1a1;
+        }
+
+        /* hide the placeholder text on focus */
+        :focus::placeholder {
+            text-indent: -999px
+        }
+
+        .searchInput:focus {
+            outline: none;
+            transform: scale(1.1);
+            transition: all 0.1s ease-in-out;
+        }
+
+        .searchInputIcon {
+            position: absolute;
+            right: 0.8rem;
+            top: 0.4rem;
+            color: #a1a1a1;
+            background: linear-gradient(to right, #ff512f, #f09719);
+            padding: 10px;
+            border-radius: 50%;
+            color: #FFFFFF;
+            transition: all 0.1s ease-in-out;
+        }
+
+        .container:focus-within>.searchInputWrapper>.searchInputIcon {
+            right: 0.2rem;
+        }
+
+        #lis {
+            background-color: #FFFFFF;
+            padding: 8px;
+            border-radius: 2px;
+            margin: 3.5px;
+            list-style: none;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+        }
+
+        .wrapper {
+            width: 100%;
+            min-height: 100vh;
+            background-image: url(images/bg.png);
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: cover;
+        }
+
+        .multisteps_form {
+            max-width: 56.25rem;
+            min-height: 45.9375rem;
+            margin: 5rem auto;
+            border-radius: 0.625rem;
+            background-image: url(images/rounded-rectangle.png), url(images/rounded-rectangle-2.png);
+            background-repeat: no-repeat;
+            background-position: center top, center bottom;
+        }
+
+        .card {
+            max-width: 56.25rem;
+            margin: 5rem auto;
+            padding: 20px;
+            border-radius: 0.625rem;
+            background-image: url(images/rounded-rectangle.png);
+            background-repeat: no-repeat;
+            background-position: center top, center bottom;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #lis::before{
+    content: '🔗';
+    width: 5px;
+    height: 10px;
+    margin-right: 5px;
+
+}
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="row flex">
+                <div class="col-md-6">
+                    <form>
+                        <div class="container card">
+                            <h1 class="heading">Computer Science Full Forms</h1>
+                            <div class="searchInputWrapper">
+                                <input class="searchInput" id="searchInput" type="text"
+                                    placeholder='focus here to search' class="form-control">
+                                <i class="searchInputIcon fa fa-search"></i>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <ul id="list">
+                                                <li id="lis">WWW - World Wide Web</li>
+                                                <li id="lis">HTTP - Hypertext Transfer Protocol</li>
+                                                <li id="lis">HTTPS - Hypertext Transfer Protocol Secure</li>
+                                                <li id="lis">URL - Uniform Resource Locator</li>
+                                                <li id="lis">FTP - File Transfer Protocol</li>
+                                                <li id="lis">HTML - Hypertext Markup Language</li>
+                                                <li id="lis">CSS - Cascading Style Sheets</li>
+                                                <li id="lis">PHP - Hypertext Preprocessor</li>
+                                                <li id="lis">ASP - Active Server Pages</li>
+                                                <li id="lis">SQL - Structured Query Language</li>
+                                                <li id="lis">AJAX - Asynchronous JavaScript and XML</li>
+                                                <li id="lis">XML - Extensible Markup Language</li>
+                                                <li id="lis">JSON - JavaScript Object Notation</li>
+                                                <li id="lis">API - Application Programming Interface</li>
+                                                <li id="lis">CMS - Content Management System</li>
+                                                <li id="lis">SEO - Search Engine Optimization</li>
+                                                <li id="lis">SEM - Search Engine Marketing</li>
+                                                <li id="lis">SMM - Social Media Marketing</li>
+                                                <li id="lis">CRM - Customer Relationship Management</li>
+                                                <li id="lis">ERP - Enterprise Resource Planning</li>
+                                                <li id="lis">LAN - Local Area Network</li>
+                                                <li id="lis">WAN - Wide Area Network</li>
+                                                <li id="lis">MAN - Metropolitan Area Network</li>
+                                                <li id="lis">PAN - Personal Area Network</li>
+                                                <li id="lis">VLAN - Virtual Local Area Network</li>
+                                                <li id="lis">WLAN - Wireless Local Area Network</li>
+                                                <li id="lis">VPN - Virtual Private Network</li>
+                                                <li id="lis">VoIP - Voice over Internet Protocol</li>
+                                                <li id="lis">IP - Internet Protocol</li>
+                                                <li id="lis">TCP - Transmission Control Protocol</li>
+                                                <li id="lis">UDP - User Datagram Protocol</li>
+                                                <li id="lis">FTP - File Transfer Protocol</li>
+                                                <li id="lis">HTTP - Hypertext Transfer Protocol</li>
+                                                <li id="lis">HTTPS - Hypertext Transfer Protocol Secure</li>
+                                                <li id="lis">SMTP - Simple Mail Transfer Protocol</li>
+                                                <li id="lis">POP3 - Post Office Protocol version 3</li>
+                                                <li id="lis">IMAP - Internet Message Access Protocol</li>
+                                                <li id="lis">DHCP - Dynamic Host Configuration Protocol</li>
+                                                <li id="lis">DNS - Domain Name System</li>
+                                                <li id="lis">ICMP - Internet Control Message Protocol</li>
+                                                <li id="lis">ARP - Address Resolution Protocol</li>
+                                                <li id="lis">NAT - Network Address Translation</li>
+                                                <li id="lis">MAC - Media Access Control</li>
+                                                <li id="lis">SSID - Service Set Identifier</li>
+                                                <li id="lis">OSI - Open Systems Interconnection</li>
+                                                <li id="lis">TCP/IP - Transmission Control Protocol/Internet Protocol
+                                                </li>
+                                                <li id="lis">BGP - Border Gateway Protocol</li>
+                                                <li id="lis">IGP - Interior Gateway Protocol</li>
+                                                <li id="lis">EGP - Exterior Gateway Protocol</li>
+                                                <li id="lis">RIP - Routing Information Protocol</li>
+                                                <li id="lis">OSPF - Open Shortest Path First</li>
+                                                <li id="lis">EIGRP - Enhanced Interior Gateway Routing Protocol</li>
+                                                <li id="lis">ISIS - Intermediate System to Intermediate System</li>
+                                                <li id="lis">STP - Spanning Tree Protocol</li>
+                                                <li id="lis">VTP - VLAN Trunking Protocol</li>
+                                                <li id="lis">ACL - Access Control List</li>
+                                                <li id="lis">MAC - Media Access Control</li>
+                                                <li id="lis">PDU - Protocol Data Unit</li>
+                                                <li id="lis">MTU - Maximum Transmission Unit</li>
+                                                <li id="lis">CSMA/CD - Carrier Sense Multiple Access with Collision
+                                                    Detection
+                                                </li>
+                                                <li id="lis">CSMA/CA - Carrier Sense Multiple Access with Collision
+                                                    Avoidance
+                                                </li>
+                                                <li id="lis">IEEE - Institute of Electrical and Electronics Engineers
+                                                </li>
+                                                <li id="lis">LAN - Local Area Network</li>
+                                                <li id="lis">WAN - Wide Area Network</li>
+                                                <li id="lis">MAN - Metropolitan Area Network</li>
+                                                <li id="lis">PAN - Personal Area Network</li>
+                                                <li id="lis">VLAN - Virtual Local Area Network</li>
+                                                <li id="lis">WLAN - Wireless Local Area Network</li>
+                                                <li id="lis">VPN - Virtual Private Network</li>
+                                                <li id="lis">VoIP - Voice over Internet Protocol</li>
+                                                <li id="lis">IP - Internet Protocol</li>
+                                                <li id="lis">TCP - Transmission Control Protocol</li>
+                                                <li id="lis">UDP - User Datagram Protocol</li>
+                                                <li id="lis">FTP - File Transfer Protocol</li>
+                                                <li id="lis">HTTP - Hypertext Transfer Protocol</li>
+                                                <li id="lis">HTTPS - Hypertext Transfer Protocol Secure</li>
+                                                <li id="lis">SMTP - Simple Mail Transfer Protocol</li>
+                                                <li id="lis">POP3 - Post Office Protocol version 3</li>
+                                                <li id="lis">IMAP - Internet Message Access Protocol</li>
+                                                <li id="lis">DHCP - Dynamic Host Configuration Protocol</li>
+                                                <li id="lis">DNS - Domain Name System</li>
+                                                <li id="lis">ICMP - Internet Control Message Protocol</li>
+                                                <li id="lis">ARP - Address Resolution Protocol</li>
+                                                <li id="lis">NAT - Network Address Translation</li>
+                                                <li id="lis">MAC - Media Access Control</li>
+                                                <li id="lis">SSID - Service Set Identifier</li>
+                                                <li id="lis">OSI - Open Systems Interconnection</li>
+                                                <li id="lis">TCP/IP - Transmission Control Protocol/Internet Protocol
+                                                </li>
+                                                <li id="lis">BGP - Border Gateway Protocol</li>
+                                                <li id="lis">IGP - Interior Gateway Protocol</li>
+                                                <li id="lis">EGP - Exterior Gateway Protocol</li>
+                                                <li id="lis">RIP - Routing Information Protocol</li>
+                                                <li id="lis">OSPF - Open Shortest Path First</li>
+                                                <li id="lis">EIGRP - Enhanced Interior Gateway Routing Protocol</li>
+                                                <li id="lis">ISIS - Intermediate System to Intermediate System</li>
+                                                <li id="lis">STP - Spanning Tree Protocol</li>
+                                                <li id="lis">VTP - VLAN Trunking Protocol</li>
+                                                <li id="lis">ACL - Access Control List</li>
+                                                <li id="lis">MAC - Media Access Control</li>
+                                                <li id="lis">PDU - Protocol Data Unit</li>
+                                                <li id="lis">MTU - Maximum Transmission Unit</li>
+                                                <li id="lis">CSMA/CD - Carrier Sense Multiple Access with Collision
+                                                    Detection
+                                                </li>
+                                                <li id="lis">CSMA/CA - Carrier Sense Multiple Access with Collision
+                                                    Avoidance
+                                                </li>
+                                                <li id="lis">IEEE - Institute of Electrical and Electronics Engineers
+                                                </li>
+                                                <li id="lis">DOS - Disk Operating System</li>
+                                                <li id="lis">RTOS - Real-Time Operating System</li>
+                                                <li id="lis">VMM - Virtual Machine Monitor</li>
+                                                <li id="lis">VM - Virtual Machine</li>
+                                                <li id="lis">POSIX - Portable Operating System Interface for Unix</li>
+                                                <li id="lis">HAL - Hardware Abstraction Layer</li>
+                                                <li id="lis">PnP - Plug and Play</li>
+                                                <li id="lis">ACPI - Advanced Configuration and Power Interface</li>
+                                                <li id="lis">BIOS - Basic Input/Output System</li>
+                                                <li id="lis">UEFI - Unified Extensible Firmware Interface</li>
+                                                <li id="lis">APIC - Advanced Programmable Interrupt Controller</li>
+                                                <li id="lis">SMP - Symmetric Multiprocessing</li>
+                                                <li id="lis">SMT - Simultaneous Multi-Threading</li>
+                                                <li id="lis">NUMA - Non-Uniform Memory Access</li>
+                                                <li id="lis">BIOS - Basic Input/Output System</li>
+                                                <li id="lis">UEFI - Unified Extensible Firmware Interface</li>
+                                                <li id="lis">APIC - Advanced Programmable Interrupt Controller</li>
+                                                <li id="lis">SMP - Symmetric Multiprocessing</li>
+                                                <li id="lis">SMT - Simultaneous Multi-Threading</li>
+                                                <li id="lis">NUMA - Non-Uniform Memory Access</li>
+                                                <li id="lis">VFS - Virtual File System</li>
+                                                <li id="lis">FS - File System</li>
+                                                <li id="lis">HFS - Hierarchical File System</li>
+                                                <li id="lis">NTFS - New Technology File System</li>
+                                                <li id="lis">FAT - File Allocation Table</li>
+                                                <li id="lis">EXT - Extended File System</li>
+                                                <li id="lis">FS - File System</li>
+                                                <li id="lis">HFS - Hierarchical File System</li>
+                                                <li id="lis">NTFS - New Technology File System</li>
+                                                <li id="lis">FAT - File Allocation Table</li>
+                                                <li id="lis">EXT - Extended File System</li>
+                                                <li id="lis">GUI - Graphical User Interface</li>
+                                                <li id="lis">CLI - Command Line Interface</li>
+                                                <li id="lis">API - Application Programming Interface</li>
+                                                <li id="lis">SDK - Software Development Kit</li>
+                                                <li id="lis">IDE - Integrated Development Environment</li>
+                                                <li id="lis">RTOS - Real-Time Operating System</li>
+                                                <li id="lis">VMM - Virtual Machine Monitor</li>
+                                                <li id="lis">VM - Virtual Machine</li>
+                                                <li id="lis">POSIX - Portable Operating System Interface for Unix</li>
+                                                <li id="lis">HAL - Hardware Abstraction Layer</li>
+                                                <li id="lis">PnP - Plug and Play</li>
+                                                <li id="lis">ACPI - Advanced Configuration and Power Interface</li>
+                                                <li id="lis">BIOS - Basic Input/Output System</li>
+                                                <li id="lis">UEFI - Unified Extensible Firmware Interface</li>
+                                                <li id="lis">APIC - Advanced Programmable Interrupt Controller</li>
+                                                <li id="lis">SMP - Symmetric Multiprocessing</li>
+                                                <li id="lis">SMT - Simultaneous Multi-Threading</li>
+                                                <li id="lis">NUMA - Non-Uniform Memory Access</li>
+                                                <li id="lis">VFS - Virtual File System</li>
+                                                <li id="lis">FS - File System</li>
+                                                <li id="lis">HFS - Hierarchical File System</li>
+                                                <li id="lis">NTFS - New Technology File System</li>
+                                                <li id="lis">FAT - File Allocation Table</li>
+                                                <li id="lis">EXT - Extended File System</li>
+                                                <li id="lis">GUI - Graphical User Interface</li>
+                                                <li id="lis">CLI - Command Line Interface</li>
+                                                <li id="lis">API - Application Programming Interface</li>
+                                                <li id="lis">SDK - Software Development Kit</li>
+                                                <li id="lis">IDE - Integrated Development Environment</li>
+                                                <li id="lis">ADT - Abstract Data Type</li>
+                                                <li id="lis">API - Application Programming Interface</li>
+                                                <li id="lis">AVL - Adelson-Velsky and Landis</li>
+                                                <li id="lis">BST - Binary Search Tree</li>
+                                                <li id="lis">BFS - Breadth-First Search</li>
+                                                <li id="lis">DFS - Depth-First Search</li>
+                                                <li id="lis">FIFO - First In, First Out</li>
+                                                <li id="lis">LIFO - Last In, First Out</li>
+                                                <li id="lis">LIS - Longest Increasing Subsequence</li>
+                                                <li id="lis">LCS - Longest Common Subsequence</li>
+                                                <li id="lis">LRU - Least Recently Used</li>
+                                                <li id="lis">MST - Minimum Spanning Tree</li>
+                                                <li id="lis">PR Quadtree - Point Region Quadtree</li>
+                                                <li id="lis">RBT - Red-Black Tree</li>
+                                                <li id="lis">SLL - Singly Linked List</li>
+                                                <li id="lis">DLL - Doubly Linked List</li>
+                                                <li id="lis">CLL - Circular Linked List</li>
+                                                <li id="lis">HT - Hash Table</li>
+                                                <li id="lis">HS - Heap Sort</li>
+                                                <li id="lis">QS - Quick Sort</li>
+                                                <li id="lis">MS - Merge Sort</li>
+                                                <li id="lis">Trie - Prefix Tree</li>
+                                                <li id="lis">RB Tree - Red-Black Tree</li>
+                                                <li id="lis">Splay Tree</li>
+                                                <li id="lis">AVL Tree</li>
+                                                <li id="lis">Heap</li>
+                                                <li id="lis">Binary Heap</li>
+                                                <li id="lis">Graph</li>
+                                                <li id="lis">Directed Graph</li>
+                                                <li id="lis">Undirected Graph</li>
+                                                <li id="lis">Weighted Graph</li>
+                                                <li id="lis">Binary Tree</li>
+                                                <li id="lis">Binary Search Tree</li>
+                                                <li id="lis">AVL Tree</li>
+                                                <li id="lis">Red-Black Tree</li>
+                                                <li id="lis">Heap</li>
+                                                <li id="lis">Hash Table</li>
+                                                <li id="lis">Trie - Prefix Tree</li>
+                                                <li id="lis">Linked List</li>
+                                                <li id="lis">Singly Linked List</li>
+                                                <li id="lis">Doubly Linked List</li>
+                                                <li id="lis">Circular Linked List</li>
+                                                <li id="lis">Stack</li>
+                                                <li id="lis">Queue</li>
+                                                <li id="lis">Priority Queue</li>
+                                                <li id="lis">Heap</li>
+                                                <li id="lis">Graph</li>
+                                                <li id="lis">Directed Graph</li>
+                                                <li id="lis">Undirected Graph</li>
+                                                <li id="lis">Weighted Graph</li>
+                                                <li id="lis">Adjacency Matrix</li>
+                                                <li id="lis">Adjacency List</li>
+                                                <li id="lis">Hash Table</li>
+                                                <li id="lis">Hash Map</li>
+                                                <li id="lis">Hash Set</li>
+                                                <li id="lis">Trie - Prefix Tree</li>
+                                                <li id="lis">Bloom Filter</li>
+                                                <li id="lis">Heap</li>
+                                                <li id="lis">Binary Heap</li>
+                                                <li id="lis">Max Heap</li>
+                                                <li id="lis">Min Heap</li>
+                                                <li id="lis">Graph</li>
+                                                <li id="lis">Directed Graph</li>
+                                                <li id="lis">Undirected Graph</li>
+                                                <li id="lis">Weighted Graph</li>
+                                                <li id="lis">DFS - Depth-First Search</li>
+                                                <li id="lis">BFS - Breadth-First Search</li>
+                                                <li id="lis">Dijkstra's Algorithm</li>
+                                                <li id="lis">Prim's Algorithm</li>
+                                                <li id="lis">Kruskal's Algorithm</li>
+                                                <li id="lis">Ford-Fulkerson Algorithm</li>
+                                                <li id="lis">Bellman-Ford Algorithm</li>
+                                                <li id="lis">Johnson's Algorithm</li>
+                                                <li id="lis">Dynamic Programming</li>
+                                                <li id="lis">Backtracking</li>
+                                                <li id="lis">Greedy Algorithm</li>
+                                                <li id="lis">Divide and Conquer</li>
+                                                <li id="lis">Branch and Bound</li>
+                                                <li id="lis">Hashing</li>
+                                                <li id="lis">Prefix Sum</li>
+                                                <li id="lis">Fenwick Tree</li>
+                                                <li id="lis">Segment Tree</li>
+                                                <li id="lis">Suffix Array</li>
+                                                <li id="lis">Trie - Prefix Tree</li>
+                                                <li id="lis">Binary Indexed Tree</li>
+                                                <li id="lis">Union-Find</li>
+                                                <li id="lis">Disjoint Set</li>
+                                                <li id="lis">AI - Artificial Intelligence</li>
+                                                <li id="lis">ML - Machine Learning</li>
+                                                <li id="lis">NLP - Natural Language Processing</li>
+                                                <li id="lis">CNN - Convolutional Neural Network</li>
+                                                <li id="lis">RNN - Recurrent Neural Network</li>
+                                                <li id="lis">DNN - Deep Neural Network</li>
+                                                <li id="lis">SVM - Support Vector Machine</li>
+                                                <li id="lis">KNN - K-Nearest Neighbors</li>
+                                                <li id="lis">ANN - Artificial Neural Network</li>
+                                                <li id="lis">GAN - Generative Adversarial Network</li>
+                                                <li id="lis">DL - Deep Learning</li>
+                                                <li id="lis">RL - Reinforcement Learning</li>
+                                                <li id="lis">OCR - Optical Character Recognition</li>
+                                                <li id="lis">ASR - Automatic Speech Recognition</li>
+                                                <li id="lis">CART - Classification and Regression Trees</li>
+                                                <li id="lis">BERT - Bidirectional Encoder Representations from
+                                                    Transformers</li>
+                                                <li id="lis">LSTM - Long Short-Term Memory</li>
+                                                <li id="lis">DBN - Deep Belief Network</li>
+                                                <li id="lis">ICA - Independent Component Analysis</li>
+                                                <li id="lis">SOM - Self-Organizing Map</li>
+                                                <li id="lis">PID - Proportional-Integral-Derivative</li>
+                                                <li id="lis">K-Means - K-Means Clustering</li>
+                                                <li id="lis">GA - Genetic Algorithm</li>
+                                                <li id="lis">ES - Evolution Strategies</li>
+                                                <li id="lis">NEAT - NeuroEvolution of Augmenting Topologies</li>
+                                                <li id="lis">AGI - Artificial General Intelligence</li>
+                                                <li id="lis">ASI - Artificial Superintelligence</li>
+                                                <li id="lis">CBR - Case-Based Reasoning</li>
+                                                <li id="lis">MT - Machine Translation</li>
+                                                <li id="lis">IR - Information Retrieval</li>
+                                                <li id="lis">AI - Artificial Intelligence</li>
+                                                <li id="lis">ML - Machine Learning</li>
+                                                <li id="lis">NLP - Natural Language Processing</li>
+                                                <li id="lis">CNN - Convolutional Neural Network</li>
+                                                <li id="lis">RNN - Recurrent Neural Network</li>
+                                                <li id="lis">DNN - Deep Neural Network</li>
+                                                <li id="lis">SVM - Support Vector Machine</li>
+                                                <li id="lis">KNN - K-Nearest Neighbors</li>
+                                                <li id="lis">ANN - Artificial Neural Network</li>
+                                                <li id="lis">GAN - Generative Adversarial Network</li>
+                                                <li id="lis">DL - Deep Learning</li>
+                                                <li id="lis">RL - Reinforcement Learning</li>
+                                                <li id="lis">OCR - Optical Character Recognition</li>
+                                                <li id="lis">ASR - Automatic Speech Recognition</li>
+                                                <li id="lis">CART - Classification and Regression Trees</li>
+                                                <li id="lis">BERT - Bidirectional Encoder Representations from
+                                                    Transformers</li>
+                                                <li id="lis">LSTM - Long Short-Term Memory</li>
+                                                <li id="lis">DBN - Deep Belief Network</li>
+                                                <li id="lis">ICA - Independent Component Analysis</li>
+                                                <li id="lis">SOM - Self-Organizing Map</li>
+                                                <li id="lis">PID - Proportional-Integral-Derivative</li>
+                                                <li id="lis">K-Means - K-Means Clustering</li>
+                                                <li id="lis">GA - Genetic Algorithm</li>
+                                                <li id="lis">ES - Evolution Strategies</li>
+                                                <li id="lis">NEAT - NeuroEvolution of Augmenting Topologies</li>
+                                                <li id="lis">AGI - Artificial General Intelligence</li>
+                                                <li id="lis">ASI - Artificial Superintelligence</li>
+                                                <li id="lis">CBR - Case-Based Reasoning</li>
+                                                <li id="lis">MT - Machine Translation</li>
+                                                <li id="lis">IR - Information Retrieval</li>
+                                                <li id="lis">API - Application Programming Interface</li>
+                                                <li id="lis">IDE - Integrated Development Environment</li>
+                                                <li id="lis">GUI - Graphical User Interface</li>
+                                                <li id="lis">CLI - Command Line Interface</li>
+                                                <li id="lis">HTML - Hypertext Markup Language</li>
+                                                <li id="lis">CSS - Cascading Style Sheets</li>
+                                                <li id="lis">JS - JavaScript</li>
+                                                <li id="lis">PHP - Hypertext Preprocessor</li>
+                                                <li id="lis">PYTHON - Python Programming Language</li>
+                                                <li id="lis">JAVA - Java Programming Language</li>
+                                                <li id="lis">C - C Programming Language</li>
+                                                <li id="lis">C++ - C++ Programming Language</li>
+                                                <li id="lis">C# - C Sharp Programming Language</li>
+                                                <li id="lis">SQL - Structured Query Language</li>
+                                                <li id="lis">XML - Extensible Markup Language</li>
+                                                <li id="lis">JSON - JavaScript Object Notation</li>
+                                                <li id="lis">YAML - YAML Ain't Markup Language</li>
+                                                <li id="lis">RUBY - Ruby Programming Language</li>
+                                                <li id="lis">SWIFT - Swift Programming Language</li>
+                                                <li id="lis">KOTLIN - Kotlin Programming Language</li>
+                                                <li id="lis">GO - Go Programming Language</li>
+                                                <li id="lis">PERL - Perl Programming Language</li>
+                                                <li id="lis">R - R Programming Language</li>
+                                                <li id="lis">MATLAB - Matrix Laboratory</li>
+                                                <li id="lis">VB - Visual Basic</li>
+                                                <li id="lis">COBOL - Common Business-Oriented Language</li>
+                                                <li id="lis">FORTRAN - Formula Translation</li>
+                                                <li id="lis">ADA - Ada Programming Language</li>
+                                                <li id="lis">SCALA - Scala Programming Language</li>
+                                                <li id="lis">LISP - List Processing</li>
+                                                <li id="lis">PROLOG - Programming in Logic</li>
+                                                <li id="lis">HASKELL - Haskell Programming Language</li>
+                                                <li id="lis">RUST - Rust Programming Language</li>
+                                                <li id="lis">SWIPE - Swift for iOS Apps</li>
+                                                <li id="lis">GWT - Google Web Toolkit</li>
+                                                <li id="lis">ASSEMBLY - Assembly Language</li>
+                                                <li id="lis">DART - Dart Programming Language</li>
+                                                <li id="lis">JULIA - Julia Programming Language</li>
+                                                <li id="lis">COFFEESCRIPT - CoffeeScript</li>
+                                                <li id="lis">VERILOG - Verilog Hardware Description Language</li>
+                                                <li id="lis">VHDL - VHSIC Hardware Description Language</li>
+                                                <li id="lis">ABAP - Advanced Business Application Programming</li>
+                                                <li id="lis">COBOL - Common Business-Oriented Language</li>
+                                                <li id="lis">DYLAN - Dylan Programming Language</li>
+                                                <li id="lis">FANTOM - Fantom Programming Language</li>
+                                                <li id="lis">GROOVY - Groovy Programming Language</li>
+                                                <li id="lis">JYTHON - Jython Programming Language</li>
+                                                <li id="lis">KSH - Korn Shell</li>
+                                                <li id="lis">LSH - Liskell</li>
+                                                <li id="lis">MIRANDA - Miranda Programming Language</li>
+                                                <li id="lis">NIM - Nim Programming Language</li>
+                                                <li id="lis">ODIN - Odin Programming Language</li>
+                                                <li id="lis">PROMAL - Procedural Language</li>
+                                                <li id="lis">Q - Q Programming Language</li>
+                                                <li id="lis">RIDL - Resource Interface Description Language</li>
+                                                <li id="lis">ST - Structured Text</li>
+                                                <li id="lis">TIKZ - TikZ</li>
+                                                <li id="lis">UNICON - Unified Extended Dialect of ICON</li>
+                                                <li id="lis">VALA - Vala Programming Language</li>
+                                                <li id="lis">WOLFRAM - Wolfram Language</li>
+                                                <li id="lis">XL - XL Programming Language</li>
+                                                <li id="lis">YORICK - Yorick Programming Language</li>
+                                                <li id="lis">ZPL - ZPL Programming Language</li>
+                                                <li id="lis">SDLC - Software Development Life Cycle</li>
+                                                <li id="lis">API - Application Programming Interface</li>
+                                                <li id="lis">GUI - Graphical User Interface</li>
+                                                <li id="lis">CLI - Command Line Interface</li>
+                                                <li id="lis">IDE - Integrated Development Environment</li>
+                                                <li id="lis">VCS - Version Control System</li>
+                                                <li id="lis">TDD - Test-Driven Development</li>
+                                                <li id="lis">BDD - Behavior-Driven Development</li>
+                                                <li id="lis">CI/CD - Continuous Integration/Continuous Deployment</li>
+                                                <li id="lis">UML - Unified Modeling Language</li>
+                                                <li id="lis">OOP - Object-Oriented Programming</li>
+                                                <li id="lis">MVC - Model-View-Controller</li>
+                                                <li id="lis">ORM - Object-Relational Mapping</li>
+                                                <li id="lis">REST - Representational State Transfer</li>
+                                                <li id="lis">SOAP - Simple Object Access Protocol</li>
+                                                <li id="lis">JSON - JavaScript Object Notation</li>
+                                                <li id="lis">XML - Extensible Markup Language</li>
+                                                <li id="lis">HTML - Hypertext Markup Language</li>
+                                                <li id="lis">CSS - Cascading Style Sheets</li>
+                                                <li id="lis">SQL - Structured Query Language</li>
+                                                <li id="lis">DDL - Data Definition Language</li>
+                                                <li id="lis">DML - Data Manipulation Language</li>
+                                                <li id="lis">CI - Continuous Integration</li>
+                                                <li id="lis">CD - Continuous Deployment</li>
+                                                <li id="lis">QA - Quality Assurance</li>
+                                                <li id="lis">UX - User Experience</li>
+                                                <li id="lis">UI - User Interface</li>
+                                                <li id="lis">ERP - Enterprise Resource Planning</li>
+                                                <li id="lis">CRM - Customer Relationship Management</li>
+                                                <li id="lis">SRS - Software Requirements Specification</li>
+                                                <li id="lis">SDD - Software Design Description</li>
+                                                <li id="lis">SRS - Software Requirements Specification</li>
+                                                <li id="lis">SDD - Software Design Description</li>
+                                                <li id="lis">SRS - Software Requirements Specification</li>
+                                                <li id="lis">SDD - Software Design Description</li>
+                                                <li id="lis">SRS - Software Requirements Specification</li>
+                                                <li id="lis">SDD - Software Design Description</li>
+                                                <li id="lis">SRS - Software Requirements Specification</li>
+                                                <li id="lis">SDD - Software Design Description</li>
+                                                <li id="lis">ML - Machine Learning</li>
+                                                <li id="lis">DL - Deep Learning</li>
+                                                <li id="lis">AI - Artificial Intelligence</li>
+                                                <li id="lis">NLP - Natural Language Processing</li>
+                                                <li id="lis">CNN - Convolutional Neural Network</li>
+                                                <li id="lis">RNN - Recurrent Neural Network</li>
+                                                <li id="lis">SVM - Support Vector Machine</li>
+                                                <li id="lis">KNN - K-Nearest Neighbors</li>
+                                                <li id="lis">ANN - Artificial Neural Network</li>
+                                                <li id="lis">GAN - Generative Adversarial Network</li>
+                                                <li id="lis">RL - Reinforcement Learning</li>
+                                                <li id="lis">DT - Decision Tree</li>
+                                                <li id="lis">RF - Random Forest</li>
+                                                <li id="lis">PCA - Principal Component Analysis</li>
+                                                <li id="lis">LR - Logistic Regression</li>
+                                                <li id="lis">NB - Naive Bayes</li>
+                                                <li id="lis">SGD - Stochastic Gradient Descent</li>
+                                                <li id="lis">K-Means - K-Means Clustering</li>
+                                                <li id="lis">EM - Expectation-Maximization</li>
+                                                <li id="lis">NMF - Non-Negative Matrix Factorization</li>
+                                                <li id="lis">HMM - Hidden Markov Model</li>
+                                                <li id="lis">CRF - Conditional Random Field</li>
+                                                <li id="lis">BPTT - Backpropagation Through Time</li>
+                                                <li id="lis">LSTM - Long Short-Term Memory</li>
+                                                <li id="lis">GRU - Gated Recurrent Unit</li>
+                                                <li id="lis">BERT - Bidirectional Encoder Representations from
+                                                    Transformers</li>
+                                                <li id="lis">GPT - Generative Pre-trained Transformer</li>
+                                                <li id="lis">VGG - Visual Geometry Group</li>
+                                                <li id="lis">ResNet - Residual Network</li>
+                                                <li id="lis">XGBoost - Extreme Gradient Boosting</li>
+                                                <li id="lis">AdaBoost - Adaptive Boosting</li>
+                                                <li id="lis">YOLO - You Only Look Once</li>
+                                                <li id="lis">SSD - Single Shot Multibox Detector</li>
+                                                <li id="lis">TPE - Tree-structured Parzen Estimator</li>
+                                                <li id="lis">MLP - Multi-Layer Perceptron</li>
+                                                <li id="lis">DQN - Deep Q-Network</li>
+                                                <li id="lis">BPTT - Backpropagation Through Time</li>
+                                                <li id="lis">CAE - Convolutional Autoencoder</li>
+                                                <li id="lis">VAE - Variational Autoencoder</li>
+                                                <li id="lis">GMM - Gaussian Mixture Model</li>
+                                                <li id="lis">GAN - Generative Adversarial Network</li>
+                                                <li id="lis">LDA - Linear Discriminant Analysis</li>
+                                                <li id="lis">SVD - Singular Value Decomposition</li>
+                                                <li id="lis">EM - Expectation-Maximization</li>
+                                                <li id="lis">SOM - Self-Organizing Map</li>
+                                                <li id="lis">PCA - Principal Component Analysis</li>
+                                                <li id="lis">TSNE - t-Distributed Stochastic Neighbor Embedding</li>
+                                                <li id="lis">RBM - Restricted Boltzmann Machine</li>
+                                                <li id="lis">KF - Kalman Filter</li>
+                                                <li id="lis">RANSAC - Random Sample Consensus</li>
+                                                <li id="lis">GAN - Generative Adversarial Network</li>
+                                                <li id="lis">PGAN - Progressive Generative Adversarial Network</li>
+                                                <li id="lis">SOM - Self-Organizing Map</li>
+                                                <li id="lis">NCA - Neighbourhood Components Analysis</li>
+                                                <li id="lis">LMNN - Large Margin Nearest Neighbors</li>
+                                                <li id="lis">ADALINE - ADAptive LInear NEuron</li>
+                                                <li id="lis">Q-Learning - Quality Learning</li>
+                                                <li id="lis">PPO - Proximal Policy Optimization</li>
+                                                <li id="lis">TRPO - Trust Region Policy Optimization</li>
+                                                <li id="lis">A3C - Asynchronous Advantage Actor-Critic</li>
+                                                <li id="lis">DARPA - Defense Advanced Research Projects Agency</li>
+                                                <li id="lis">NLP - Natural Language Processing</li>
+                                                <li id="lis">NN - Neural Network</li>
+                                                <li id="lis">CART - Classification and Regression Trees</li>
+                                                <li id="lis">SVD - Singular Value Decomposition</li>
+                                                <li id="lis">RBM - Restricted Boltzmann Machine</li>
+                                                <li id="lis">KF - Kalman Filter</li>
+                                                <li id="lis">RANSAC - Random Sample Consensus</li>
+                                                <li id="lis">GAN - Generative Adversarial Network</li>
+                                                <li id="lis">PGAN - Progressive Generative Adversarial Network</li>
+                                                <li id="lis">SOM - Self-Organizing Map</li>
+                                                <li id="lis">NCA - Neighbourhood Components Analysis</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                </input>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const list = document.getElementById('list');
+        const items = list.getElementsByTagName('li');
+
+        searchInput.addEventListener('input', function () {
+            const searchValue = searchInput.value.toLowerCase();
+
+            for (let i = 0; i < items.length; i++) {
+                const item = items[i];
+                const itemName = item.textContent.toLowerCase();
+
+                if (itemName.includes(searchValue)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
